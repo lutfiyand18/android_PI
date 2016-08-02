@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="spinaktivitas">
+        <item>berat</item>
+        <item>ringan</item>
+        <item>sedang</item>
+    </string-array>
+</resources>
