@@ -33,7 +33,7 @@ public class Menu1 extends AppCompatActivity {
         bt_seputar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent keMenuSeputar = new Intent(Menu1.this, DisplayActivity.class);
+                Intent keMenuSeputar = new Intent(Menu1.this, InfoGizi.class);
                 startActivity(keMenuSeputar);
             }
         });
@@ -47,7 +47,7 @@ public class Menu1 extends AppCompatActivity {
         bt_datagizi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent keMenuDataGizi = new Intent(Menu1.this, DataGizi.class);
+                Intent keMenuDataGizi = new Intent(Menu1.this, DisplayActivity.class);
                 startActivity(keMenuDataGizi);
             }
         });

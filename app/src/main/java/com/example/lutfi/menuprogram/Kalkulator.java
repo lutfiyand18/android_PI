@@ -2,7 +2,9 @@ package com.example.lutfi.menuprogram;
 
 import android.app.Activity;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -203,6 +205,30 @@ public class Kalkulator extends Activity {
 
         tvHasil.setText(tampil);
         c.close();
+
+        DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                switch (which){
+                    case DialogInterface.BUTTON_POSITIVE:
+                        Intent keMenuDataGizi = new Intent(Kalkulator.this, DisplayActivity.class);
+                        startActivity(keMenuDataGizi);
+                        break;
+
+                    case DialogInterface.BUTTON_NEGATIVE:
+                        Intent keMenuUtama = new Intent(Kalkulator.this, Menu1.class);
+                        startActivity(keMenuUtama);
+                        break;
+                }
+            }
+        };
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Mau lihat data penggunaan kalkulator?").setPositiveButton("Yes", dialogClickListener)
+                .setNegativeButton("No", dialogClickListener).show();
+
+
+
     }
 
 
